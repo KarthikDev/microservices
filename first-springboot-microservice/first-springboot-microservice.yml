@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: first-springboot-microservice
+  name: first-springboot-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: first-springboot-microservice
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: first-springboot-microservice
+    spec:
+      containers:
+      - image: first-springboot-microservice:v1
+        name: first-springboot-microservice
+        imagePullPolicy: Never
+        resources: {}
+status: {}
